@@ -1,0 +1,26 @@
+plugins {
+    id 'groovy'
+    id 'org.springframework.boot' version '3.0.0'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.stupendousware.resume-service'
+version '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.codehaus.groovy:groovy:3.0.13'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+}
+
+test {
+    useJUnitPlatform()
+}
